@@ -32,6 +32,7 @@ import java.util.Set;
 import static io.github.newhoo.restkit.common.RestConstant.POST_REQUEST_SCRIPT;
 import static io.github.newhoo.restkit.common.RestConstant.PRE_REQUEST_SCRIPT;
 import static io.github.newhoo.restkit.common.RestConstant.WEB_FRAMEWORK_LOCAL;
+import static io.github.newhoo.restkit.common.RestConstant.WEB_FRAMEWORK_REDIS;
 
 /**
  * SettingForm
@@ -66,6 +67,9 @@ public class SettingForm {
     private JLabel apiFilePathLabel;
     private JPanel apiFilePathPanel;
     private TextFieldWithBrowseButton apiFilePathTextField;
+    private JTextField redisIpTextField;
+    private JTextField redisProjectTextField;
+    private JTextField redisPortTextField;
 
     private final Project project;
 
@@ -89,6 +93,16 @@ public class SettingForm {
             webFrameworkPanel.add(checkBox);
             if (WEB_FRAMEWORK_LOCAL.equals(requestResolver.getFrameworkName())) {
                 checkBox.addItemListener(e -> apiFilePathTextField.setEnabled(e.getStateChange() == ItemEvent.SELECTED));
+            } else if (WEB_FRAMEWORK_REDIS.equals(requestResolver.getFrameworkName())) {
+                checkBox.addItemListener(e -> {
+                    boolean selected = e.getStateChange() == ItemEvent.SELECTED;
+                    redisIpTextField.setEnabled(selected);
+                    redisPortTextField.setEnabled(selected);
+                    redisProjectTextField.setEnabled(selected);
+                    if (selected && StringUtils.isEmpty(redisProjectTextField.getText())) {
+                        redisProjectTextField.setText(project.getName());
+                    }
+                });
             }
         }
 
@@ -190,6 +204,9 @@ public class SettingForm {
         commonSetting.setPostRequestScriptPath(postRequestScriptPathTextField.getText().trim());
 
         commonSetting.setApiFilePath(apiFilePathTextField.getText().trim());
+        commonSetting.setRedisIp(redisIpTextField.getText().trim());
+        commonSetting.setRedisPort(redisPortTextField.getText().trim());
+        commonSetting.setRedisProject(redisProjectTextField.getText().trim());
     }
 
     public void reset(CommonSetting commonSetting) {
@@ -213,6 +230,9 @@ public class SettingForm {
         postRequestScriptPathTextField.setText(FileUtil.toSystemDependentName(commonSetting.getPostRequestScriptPath()));
 
         apiFilePathTextField.setText(FileUtil.toSystemDependentName(commonSetting.getApiFilePath()));
+        redisIpTextField.setText(commonSetting.getRedisIp());
+        redisPortTextField.setText(commonSetting.getRedisPort());
+        redisProjectTextField.setText(commonSetting.getRedisProject());
     }
 
     private Set<String> getEnabledWebFrameworks() {

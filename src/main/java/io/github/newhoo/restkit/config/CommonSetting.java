@@ -34,6 +34,9 @@ public class CommonSetting {
     private String preRequestScriptPath = "";
     private String postRequestScriptPath = "";
     private String apiFilePath = "";
+    private String redisIp = "";
+    private String redisPort = "";
+    private String redisProject = "";
 
     public boolean isModified(CommonSetting modifiedSetting) {
         return requestTimeout != modifiedSetting.getRequestTimeout()
@@ -45,6 +48,9 @@ public class CommonSetting {
                 || !StringUtils.equals(preRequestScriptPath, modifiedSetting.getPreRequestScriptPath())
                 || !StringUtils.equals(postRequestScriptPath, modifiedSetting.getPostRequestScriptPath())
                 || !StringUtils.equals(apiFilePath, modifiedSetting.getApiFilePath())
+                || !StringUtils.equals(redisIp, modifiedSetting.getRedisIp())
+                || !StringUtils.equals(redisPort, modifiedSetting.getRedisPort())
+                || !StringUtils.equals(redisProject, modifiedSetting.getRedisProject())
                 || !CollectionUtils.isEqualCollection(enabledWebFrameworks, modifiedSetting.getEnabledWebFrameworks());
     }
 

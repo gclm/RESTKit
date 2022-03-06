@@ -111,6 +111,7 @@
 
     <extensions defaultExtensionNs="io.github.newhoo.restkit">
         <restfulResolver implementation="io.github.newhoo.restkit.restful.local.LocalRequestResolver$FileResolverProvider"/>
+        <restfulResolver implementation="io.github.newhoo.restkit.restful.redis.RedisStoreResolver$RedisStoreResolverProvider"/>
     </extensions>
 
     <actions>

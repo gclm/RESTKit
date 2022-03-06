@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    compile fileTree(dir: 'lib', includes: ['*jar'])
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 }

@@ -10,6 +10,7 @@ public class RestConstant {
 
     public static final String WEB_FRAMEWORK_SPRING_MVC = "Spring MVC";
     public static final String WEB_FRAMEWORK_LOCAL = "Local Store";
+    public static final String WEB_FRAMEWORK_REDIS = "Redis Store";
 
     public static final String PLACEHOLDER_BASE_URL = "{{baseUrl}}";
     public static final String PLACEHOLDER_URL = "URL";
