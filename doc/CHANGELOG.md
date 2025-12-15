@@ -2,6 +2,40 @@
 
 [6.0 Upgrade Guide - 6.0升级指南](./zh_CN/快速入门/6.0升级指南.md)
 
+## 6.8.0
+
+- \[API] The click mode in the api tree now operates independently from searchEverywhere entry.
+- \[API] Support disable shortcut in the api searchEverywhere.
+- \[API] Support binding shortcut for sending button, configurable in the right-click menu.
+- \[API] Optimized preset parameters: now auto-filled during request generation. The original preset parameters have been reconfigured as shared parameters.
+- \[API] Added batch tagging support.
+- \[API] Support displaying tags on tree nodes .
+- \[API] Add a new display mode for api and client, configurable in the Toolbar view.
+- \[API] Client URL part supports custom order, configurable in the Toolbar view.
+- \[API] Add a generate request button to the toolbar.
+- \[Toolbox] Support formatting output to JSON for aes decryption.
+<br/><br/>
+- \[API] 随处搜索和接口树中的点击模式相互独立.
+- \[API] 随处搜索支持禁用快捷键.
+- \[API] 发送按钮支持绑定快捷键，在发送按钮右键菜单中设置.
+- \[API] 优化预置参数，生成请求时自动填入；原预置参数调整为共享参数.
+- \[API] 支持批量打标签.
+- \[API] 树节点支持展示标签列表.
+- \[API] 新增一套接口和客户端展示模式，在toolbar视图中设置.
+- \[API] 客户端URL部分界面支持自定义顺序，在toolbar视图中设置.
+- \[API] 工具栏添加生成请求按钮.
+- \[Toolbox] AES解密结果支持格式化为 JSON.
+
+## 6.7.0
+
+- Fixed bugs
+- \[API] Search everywhere supports module command.
+- \[API] Java language support for sql entity class scanning
+  <br/><br/>
+- 修复一些已知问题
+- \[API] 接口随处搜索指令新增按模块搜索指令
+- \[API] Java语言支持SQL实体类扫描
+
 ## 6.6.0
 
 - update global sort
