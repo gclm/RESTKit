@@ -2,6 +2,23 @@
 
 [6.0 Upgrade Guide - 6.0升级指南](./zh_CN/快速入门/6.0升级指南.md)
 
+## 6.10.0
+
+- Fixed some bugs and improved the user experience.
+<br/><br/>
+- 修复一些bug，优化使用体验.
+- 运行配置优化 maven 和 gradle，可查看具体设置页面提示
+
+## 6.9.0
+
+- Fix some bugs.
+- \[Java Tool] auto execute mysql explain for java apps.
+- \[Java Tool] invoke spring bean method for java apps.
+<br/><br/>
+- 修复一些问题.
+- \[Java工具] java 应用支持自动输出mysql执行计划和原始日志.
+- \[Java工具] java spring 应用支持快速调用 bean 方法.
+
 ## 6.8.0
 
 - \[API] The click mode in the api tree now operates independently from searchEverywhere entry.
