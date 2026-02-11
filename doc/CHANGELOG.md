@@ -2,6 +2,16 @@
 
 [6.0 Upgrade Guide - 6.0升级指南](./zh_CN/快速入门/6.0升级指南.md)
 
+## 6.11.0
+
+- Fixed some bugs and improved the user experience.
+- \[API] Support rendering downloaded images.
+- \[Run Configuration] Refactor import and export implementation. Add extension points.
+<br/><br/>
+- 修复一些bug，优化使用体验.
+- \[API] 支持渲染下载的图片.
+- \[运行配置] 导入导出重构，新增扩展点.
+
 ## 6.10.0
 
 - Fixed some bugs and improved the user experience.
